@@ -1,0 +1,73 @@
+object FormRegistration: TFormRegistration
+  Left = 0
+  Top = 0
+  BorderIcons = [biSystemMenu]
+  Caption = #1040#1082#1090#1080#1074#1072#1094#1080#1103
+  ClientHeight = 105
+  ClientWidth = 271
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  KeyPreview = True
+  OldCreateOrder = False
+  Position = poMainFormCenter
+  OnActivate = FormActivate
+  OnKeyPress = FormKeyPress
+  PixelsPerInch = 96
+  TextHeight = 13
+  object sPanel1: TsPanel
+    Left = 0
+    Top = 0
+    Width = 271
+    Height = 105
+    Align = alClient
+    TabOrder = 0
+    object lbl1: TLabel
+      Left = 30
+      Top = 3
+      Width = 210
+      Height = 46
+      Caption = #1042#1074#1077#1076#1080#1090#1077' '#1089#1088#1086#1082' '#1076#1077#1081#1089#1090#1074#1080#1103' '#13#10'          '#1083#1080#1094#1077#1085#1079#1080#1080
+      Color = clBtnFace
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clRed
+      Font.Height = -19
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      ParentColor = False
+      ParentFont = False
+    end
+    object btnOk: TsButton
+      Left = 140
+      Top = 59
+      Width = 103
+      Height = 30
+      Caption = #1055#1086#1076#1090#1074#1077#1088#1076#1080#1090#1100
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      ParentFont = False
+      TabOrder = 0
+      OnClick = btnOkClick
+    end
+    object edt1: TsEdit
+      Left = 27
+      Top = 59
+      Width = 103
+      Height = 31
+      Alignment = taCenter
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Height = -19
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      ParentFont = False
+      TabOrder = 1
+    end
+  end
+end

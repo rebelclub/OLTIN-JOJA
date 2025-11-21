@@ -1,0 +1,257 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{50660D30-CA73-4198-9C23-8BFB161882F5}</ProjectGuid>
+        <ProjectVersion>15.4</ProjectVersion>
+        <FrameworkType>VCL</FrameworkType>
+        <MainSource>adminka.dpr</MainSource>
+        <Base>True</Base>
+        <Config Condition="'$(Config)'==''">Debug</Config>
+        <Platform Condition="'$(Platform)'==''">Win32</Platform>
+        <TargetedPlatforms>1</TargetedPlatforms>
+        <AppType>Application</AppType>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Config)'=='Base' or '$(Base)'!=''">
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win32' and '$(Base)'=='true') or '$(Base_Win32)'!=''">
+        <Base_Win32>true</Base_Win32>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win64' and '$(Base)'=='true') or '$(Base_Win64)'!=''">
+        <Base_Win64>true</Base_Win64>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Config)'=='Debug' or '$(Cfg_1)'!=''">
+        <Cfg_1>true</Cfg_1>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win32' and '$(Cfg_1)'=='true') or '$(Cfg_1_Win32)'!=''">
+        <Cfg_1_Win32>true</Cfg_1_Win32>
+        <CfgParent>Cfg_1</CfgParent>
+        <Cfg_1>true</Cfg_1>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Config)'=='Release' or '$(Cfg_2)'!=''">
+        <Cfg_2>true</Cfg_2>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Base)'!=''">
+        <DCC_OutputDRCFile>true</DCC_OutputDRCFile>
+        <DCC_Namespace>System;Xml;Data;Datasnap;Web;Soap;Vcl;Vcl.Imaging;Vcl.Touch;Vcl.Samples;Vcl.Shell;$(DCC_Namespace)</DCC_Namespace>
+        <SanitizedProjectName>adminka</SanitizedProjectName>
+        <Icon_MainIcon>$(BDS)\bin\delphi_PROJECTICON.ico</Icon_MainIcon>
+        <DCC_DcuOutput>.\$(Platform)\$(Config)</DCC_DcuOutput>
+        <DCC_ExeOutput>.\$(Platform)\$(Config)</DCC_ExeOutput>
+        <DCC_E>false</DCC_E>
+        <DCC_N>false</DCC_N>
+        <DCC_S>false</DCC_S>
+        <DCC_F>false</DCC_F>
+        <DCC_K>false</DCC_K>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Base_Win32)'!=''">
+        <Manifest_File>$(BDS)\bin\default_app.manifest</Manifest_File>
+        <DCC_UsePackage>FireDACSqliteDriver;FireDACDSDriver;DBXSqliteDriver;FireDACPgDriver;fmx;IndySystem;TeeDB;tethering;inetdbbde;vclib;DBXInterBaseDriver;DataSnapClient;DataSnapServer;DataSnapCommon;DataSnapProviderClient;DBXSybaseASEDriver;DbxCommonDriver;vclimg;dbxcds;BComport;DatasnapConnectorsFreePascal;MetropolisUILiveTile;vcldb;vcldsnap;liteprovider200;fmxFireDAC;dacvcl200;DBXDb2Driver;DBXOracleDriver;CustomIPTransport;vclribbon;dsnap;IndyIPServer;fmxase;vcl;IndyCore;dacfmx200;tmsxlsdXE6;DBXMSSQLDriver;IndyIPCommon;CloudService;FmxTeeUI;FireDACIBDriver;CodeSiteExpressPkg;DataSnapFireDAC;FireDACDBXDriver;soapserver;inetdbxpress;dsnapxml;tmsdXE6;FireDACInfxDriver;FireDACDb2Driver;adortl;FireDACASADriver;bindcompfmx;vcldbx;FireDACODBCDriver;RESTBackendComponents;rtl;dbrtl;DbxClientDriver;FireDACCommon;bindcomp;inetdb;dac200;Tee;DBXOdbcDriver;vclFireDAC;xmlrtl;DataSnapNativeClient;svnui;ibxpress;IndyProtocols;DBXMySQLDriver;FireDACCommonDriver;tmswizdXE6;bindcompdbx;bindengine;vclactnband;soaprtl;FMXTee;TeeUI;bindcompvcl;ibprovider200;unidacvcl200;vclie;unidacfmx200;FireDACADSDriver;vcltouch;unidac200;myprovider200;VclSmp;FireDACMSSQLDriver;FireDAC;DBXInformixDriver;Intraweb;VCLRESTComponents;DataSnapConnectors;DataSnapServerMidas;dsnapcon;DBXFirebirdDriver;inet;fmxobj;FireDACMySQLDriver;soapmidas;vclx;tmsexdXE6;svn;DBXSybaseASADriver;FireDACOracleDriver;fmxdae;RESTComponents;bdertl;FireDACMSAccDriver;dbexpress;DataSnapIndy10ServerTransport;IndyIPClient;$(DCC_UsePackage)</DCC_UsePackage>
+        <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
+        <VerInfo_Locale>1033</VerInfo_Locale>
+        <DCC_Namespace>Winapi;System.Win;Data.Win;Datasnap.Win;Web.Win;Soap.Win;Xml.Win;Bde;$(DCC_Namespace)</DCC_Namespace>
+        <VerInfo_Keys>CompanyName=;FileDescription=;FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductName=;ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Base_Win64)'!=''">
+        <DCC_UsePackage>FireDACSqliteDriver;FireDACDSDriver;DBXSqliteDriver;FireDACPgDriver;fmx;IndySystem;TeeDB;tethering;vclib;DBXInterBaseDriver;DataSnapClient;DataSnapServer;DataSnapCommon;DataSnapProviderClient;DBXSybaseASEDriver;DbxCommonDriver;vclimg;dbxcds;DatasnapConnectorsFreePascal;MetropolisUILiveTile;vcldb;vcldsnap;fmxFireDAC;DBXDb2Driver;DBXOracleDriver;CustomIPTransport;vclribbon;dsnap;IndyIPServer;fmxase;vcl;IndyCore;DBXMSSQLDriver;IndyIPCommon;CloudService;FmxTeeUI;FireDACIBDriver;DataSnapFireDAC;FireDACDBXDriver;soapserver;inetdbxpress;dsnapxml;tmsdXE6;FireDACInfxDriver;FireDACDb2Driver;adortl;FireDACASADriver;bindcompfmx;FireDACODBCDriver;RESTBackendComponents;rtl;dbrtl;DbxClientDriver;FireDACCommon;bindcomp;inetdb;Tee;DBXOdbcDriver;vclFireDAC;xmlrtl;DataSnapNativeClient;ibxpress;IndyProtocols;DBXMySQLDriver;FireDACCommonDriver;bindcompdbx;bindengine;vclactnband;soaprtl;FMXTee;TeeUI;bindcompvcl;vclie;FireDACADSDriver;vcltouch;VclSmp;FireDACMSSQLDriver;FireDAC;DBXInformixDriver;Intraweb;VCLRESTComponents;DataSnapConnectors;DataSnapServerMidas;dsnapcon;DBXFirebirdDriver;inet;fmxobj;FireDACMySQLDriver;soapmidas;vclx;tmsexdXE6;DBXSybaseASADriver;FireDACOracleDriver;fmxdae;RESTComponents;FireDACMSAccDriver;dbexpress;DataSnapIndy10ServerTransport;IndyIPClient;$(DCC_UsePackage)</DCC_UsePackage>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_1)'!=''">
+        <DCC_Define>DEBUG;$(DCC_Define)</DCC_Define>
+        <DCC_DebugDCUs>true</DCC_DebugDCUs>
+        <DCC_Optimize>false</DCC_Optimize>
+        <DCC_GenerateStackFrames>true</DCC_GenerateStackFrames>
+        <DCC_DebugInfoInExe>true</DCC_DebugInfoInExe>
+        <DCC_RemoteDebug>true</DCC_RemoteDebug>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_1_Win32)'!=''">
+        <VerInfo_Locale>1033</VerInfo_Locale>
+        <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
+        <DCC_RemoteDebug>false</DCC_RemoteDebug>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_2)'!=''">
+        <DCC_LocalDebugSymbols>false</DCC_LocalDebugSymbols>
+        <DCC_Define>RELEASE;$(DCC_Define)</DCC_Define>
+        <DCC_SymbolReferenceInfo>0</DCC_SymbolReferenceInfo>
+        <DCC_DebugInformation>0</DCC_DebugInformation>
+    </PropertyGroup>
+    <ItemGroup>
+        <DelphiCompile Include="$(MainSource)">
+            <MainSource>MainSource</MainSource>
+        </DelphiCompile>
+        <DCCReference Include="uadmmain.pas">
+            <Form>formMain</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="uadmdb.pas">
+            <Form>dm</Form>
+            <FormType>dfm</FormType>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="uadmpassw.pas">
+            <Form>passwForm</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="uadmconsts.pas"/>
+        <DCCReference Include="uadmusers.pas">
+            <Form>usersForm</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="uadmcudausers.pas">
+            <Form>userCUDAForm</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="uadmcabins.pas">
+            <Form>cabinForm</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="uadmbluds.pas">
+            <Form>bludsForm</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="uadmcudabluds.pas">
+            <Form>cudaBludForm</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="uadmsells.pas">
+            <Form>sellForm</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="uadmprnt.pas">
+            <Form>prnForm</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="uadmcudaprn.pas">
+            <Form>prnCUDAForm</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="uadmprnform.pas">
+            <Form>prnOrderForm</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="uadmOtchets.pas">
+            <Form>otchetForm</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="uadmreserv.pas">
+            <Form>reservForm</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="uadmcudareserv.pas">
+            <Form>cudaReservForm</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="uadmperenos.pas">
+            <Form>perenosForm</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="unlockform.pas">
+            <Form>AdminPassForm</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="planshetform.pas">
+            <Form>Form2</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="uadmOtchets2.pas">
+            <Form>otchetForm2</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="uadmhelp.pas">
+            <Form>helpForm</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="previnst.pas"/>
+        <DCCReference Include="uDaemon.pas">
+            <Form>serverForm</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="_activation.pas">
+            <Form>FormRegistration</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="uadmunlock2.pas">
+            <Form>Form1</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="uadmON_OFF.pas">
+            <Form>FormON_OFF</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="VolSN.pas"/>
+        <DCCReference Include="Ostats.pas">
+            <Form>FormOstats</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <BuildConfiguration Include="Release">
+            <Key>Cfg_2</Key>
+            <CfgParent>Base</CfgParent>
+        </BuildConfiguration>
+        <BuildConfiguration Include="Base">
+            <Key>Base</Key>
+        </BuildConfiguration>
+        <BuildConfiguration Include="Debug">
+            <Key>Cfg_1</Key>
+            <CfgParent>Base</CfgParent>
+        </BuildConfiguration>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Delphi.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Delphi.Personality>
+                <Source>
+                    <Source Name="MainSource">adminka.dpr</Source>
+                </Source>
+                <Excluded_Packages>
+                    <Excluded_Packages Name="$(BDSBIN)\dcloffice2k200.bpl">Microsoft Office 2000 Sample Automation Server Wrapper Components</Excluded_Packages>
+                    <Excluded_Packages Name="$(BDSBIN)\dclofficexp200.bpl">Microsoft Office XP Sample Automation Server Wrapper Components</Excluded_Packages>
+                </Excluded_Packages>
+                <Language>
+                    <Language Name="ProjectLang">$00000419</Language>
+                </Language>
+                <Resource_DLL_Projects>
+                    <Resource_DLL_Projects Name="Item0">Русский (Россия)*$00000419*RUS*RUS</Resource_DLL_Projects>
+                </Resource_DLL_Projects>
+                <RDP_Source_Files>
+                    <RDP_Source_Files Name="Item0">uadmmain.dfm</RDP_Source_Files>
+                    <RDP_Source_Files Name="Item1">uadmdb.dfm</RDP_Source_Files>
+                    <RDP_Source_Files Name="Item2">uadmpassw.dfm</RDP_Source_Files>
+                    <RDP_Source_Files Name="Item3">uadmotdels.dfm</RDP_Source_Files>
+                    <RDP_Source_Files Name="Item4">uadmusers.dfm</RDP_Source_Files>
+                    <RDP_Source_Files Name="Item5">uadmcudausers.dfm</RDP_Source_Files>
+                    <RDP_Source_Files Name="Item6">uadmcabins.dfm</RDP_Source_Files>
+                    <RDP_Source_Files Name="Item7">uadmbluds.dfm</RDP_Source_Files>
+                    <RDP_Source_Files Name="Item8">uadmcudabluds.dfm</RDP_Source_Files>
+                    <RDP_Source_Files Name="Item9">uadmsells.dfm</RDP_Source_Files>
+                    <RDP_Source_Files Name="Item10">uadmprnt.dfm</RDP_Source_Files>
+                    <RDP_Source_Files Name="Item11">uadmcudaprn.dfm</RDP_Source_Files>
+                    <RDP_Source_Files Name="Item12">uadmprnform.dfm</RDP_Source_Files>
+                    <RDP_Source_Files Name="Item13">uadmOtchets.dfm</RDP_Source_Files>
+                    <RDP_Source_Files Name="Item14">uadmreserv.dfm</RDP_Source_Files>
+                    <RDP_Source_Files Name="Item15">uadmcudareserv.dfm</RDP_Source_Files>
+                    <RDP_Source_Files Name="Item16">uadmperenos.dfm</RDP_Source_Files>
+                    <RDP_Source_Files Name="Item17">unlockform.dfm</RDP_Source_Files>
+                    <RDP_Source_Files Name="Item18">planshetform.dfm</RDP_Source_Files>
+                    <RDP_Source_Files Name="Item19">Win32\Debug\adminka.drc</RDP_Source_Files>
+                </RDP_Source_Files>
+            </Delphi.Personality>
+            <Deployment/>
+            <Platforms>
+                <Platform value="Win32">True</Platform>
+                <Platform value="Win64">False</Platform>
+            </Platforms>
+            <ModelSupport>False</ModelSupport>
+        </BorlandProject>
+        <ProjectFileVersion>12</ProjectFileVersion>
+    </ProjectExtensions>
+    <Import Project="$(BDS)\Bin\CodeGear.Delphi.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Delphi.Targets')"/>
+    <Import Project="$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj" Condition="Exists('$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj')"/>
+</Project>
